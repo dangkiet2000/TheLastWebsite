@@ -150,7 +150,6 @@ public class  ProductEntity {
                         rs.getInt(7),
                         rs.getString(8)
                 ));
-
             }
             rs.close();
             s.close();
@@ -274,7 +273,6 @@ public class  ProductEntity {
         ProductEntity pe= new ProductEntity();
         pe.count("casio");
         System.out.println(pe.getAllBinhLuan());
-
     }
 
 
