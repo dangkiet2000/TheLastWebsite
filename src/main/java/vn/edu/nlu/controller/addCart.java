@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "addCart", value = "/addCart")
+@WebServlet(name = "addCart", urlPatterns = "/addCart")
 public class addCart extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,6 +26,7 @@ public class addCart extends HttpServlet {
 //        session.getAttribute("cart");
         cart c = cart.getCart(session);
         c.put(p);
+        response.sendRedirect("cart.jsp");
 
         session.setAttribute("cart",c);
         c.commit(session);
