@@ -132,7 +132,7 @@ public class  ProductEntity {
 
     }
     public List<User> getAllUser() {
-
+//sai ne
         Statement s = null;
         try {
             s = ConnectionDB.connect();
