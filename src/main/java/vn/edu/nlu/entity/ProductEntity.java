@@ -6,7 +6,6 @@ import vn.edu.nlu.bean.*;
 
 import vn.edu.nlu.bean.DanhMuc;
 import vn.edu.nlu.bean.NhaCungCap;
-import vn.edu.nlu.bean.Product;
 import vn.edu.nlu.bean.User;
 
 

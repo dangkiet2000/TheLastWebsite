@@ -16,7 +16,7 @@ public class DanhMucController extends HttpServlet {
         ProductEntity pe = new ProductEntity();
         List<DanhMuc> listDM = pe.getAllDanhMuc();
         request.setAttribute("DM",listDM);
-        request.getRequestDispatcher("danhsachtheloai.jsp").forward(request,response);
+        request.getRequestDispatcher("View/danhsachtheloai.jsp").forward(request,response);
     }
 
     @Override

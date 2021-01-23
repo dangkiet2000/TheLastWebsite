@@ -2,7 +2,6 @@ package vn.edu.nlu.controller;
 
 import vn.edu.nlu.bean.Product;
 import vn.edu.nlu.bean.cart;
-import vn.edu.nlu.dao.DAO;
 import vn.edu.nlu.entity.ProductEntity;
 
 import javax.servlet.*;

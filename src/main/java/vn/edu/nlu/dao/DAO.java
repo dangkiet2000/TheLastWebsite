@@ -90,7 +90,7 @@ public class DAO {
         }
     }
 //Product(String id, String name, String img, long price, long priceSale)
-    public Product  getProductByID(String id) {
+    public Product getProductByID(String id) {
         String query = "SELECT * FROM product1\n" +
                 "WHERE id = ? ";
         try {
