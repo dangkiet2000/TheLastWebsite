@@ -15,11 +15,11 @@ public class addCart extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html:charset=UTF-8");
         String id = request.getParameter("cid");
-        if(id==null) request.getParameter("cart.jsp");
+        if(id==null) request.getParameter("index.jsp");
         ProductEntity pe = new ProductEntity();
         Product p =  pe.getById(id);
         if(p==null){
-            response.sendRedirect("cart.jsp");
+            response.sendRedirect("index.jsp");
             return;
         }
         HttpSession session = request.getSession();

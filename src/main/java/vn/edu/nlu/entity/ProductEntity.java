@@ -19,7 +19,7 @@ import java.util.List;
 
 public class  ProductEntity {
 
-
+    // sửa phan này
     public List<Product> getAll() {
 
         Statement s = null;
@@ -34,7 +34,10 @@ public class  ProductEntity {
                         rs.getString(2),
                         rs.getString(3),
                         rs.getLong(4),
-                        rs.getLong(5)
+                        rs.getLong(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getInt(15)
                 ));
 
             }
@@ -177,7 +180,7 @@ public class  ProductEntity {
 
                 }
             }
-           System.out.println(sql);
+            System.out.println(sql);
             //int out;
             //s.executeUpdate(sql);
             s.close();
@@ -193,8 +196,8 @@ public class  ProductEntity {
     }
     //chuc nang tim kiem
     //tinh so luong  data tim duoc
-     public int count(String txtSearch){
-         PreparedStatement s=null;
+    public int count(String txtSearch){
+        PreparedStatement s=null;
         try{
             String sql="select count(*) from product where name like ?";
             s= (PreparedStatement) ConnectionDB.connect(sql);
@@ -213,11 +216,11 @@ public class  ProductEntity {
         }
         return 0;
 
-     }
+    }
     public Product getById(String id) {
         PreparedStatement s = null;
         try {
-            String sql = "select * from product1 where id=?";
+            String sql = "select * from product where id=?";
             s = ConnectionDB.connect(sql);
             s.setString(1, id);
             ResultSet rs = s.executeQuery();
@@ -227,8 +230,11 @@ public class  ProductEntity {
                         rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getLong(6),
-                        rs.getLong(15)
+                        rs.getLong(4),
+                        rs.getLong(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getInt(15)
 
                 );
 
@@ -242,7 +248,7 @@ public class  ProductEntity {
             return null;
         }
     }
-     public List<Product> getProductWhereSearch(int index,int sizeData,String txtSearch){
+    public List<Product> getProductWhereSearch(int index,int sizeData,String txtSearch){
         PreparedStatement s=null;
         try {
             List<Product>re=new LinkedList<>();
@@ -267,12 +273,12 @@ public class  ProductEntity {
             e.printStackTrace();
             return new LinkedList<>();
         }
-     }
+    }
 
     public static void main(String[] args) {
         ProductEntity pe= new ProductEntity();
         pe.count("casio");
-        System.out.println(pe.getAllBinhLuan());
+        System.out.println(pe.getAll());
     }
 
 

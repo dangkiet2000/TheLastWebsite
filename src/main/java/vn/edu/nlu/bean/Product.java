@@ -15,11 +15,18 @@ public class Product implements Serializable{
     private int quantity;
     private String sup;
     private  int active;
-
-    public Product(String string, String rsString, String s, long aLong, long rsLong, long l){
-
+    // chỉnh sửa cho nay
+    public Product(String id, String name, String img1, long price, long priceSale, String img2, String img3, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.img1 = img1;
+        this.price = price;
+        this.priceSale = priceSale;
+        this.img2 = img2;
+        this.img3 = img3;
+        this.quantity = quantity;
     }
-
+    // hết
     public Product(String id, String img1, String name, String sup, long price, long priceSale, int quantity, int active) {
         this.id = id;
 
@@ -136,21 +143,22 @@ public class Product implements Serializable{
     public  void remove(){
         quantity--;
     }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", img='" + img1 + '\'' +
+                ", img1='" + img1 + '\'' +
+                ", img2='" + img2 + '\'' +
+                ", img3='" + img3 + '\'' +
                 ", price=" + price +
                 ", priceSale=" + priceSale +
-                ", sup="+ sup+
-                ", soluong="+quantity+
-                ",active=" +active
-                +
+                ", quantity=" + quantity +
+                ", sup='" + sup + '\'' +
+                ", active=" + active +
                 '}';
     }
-
 }
 
 

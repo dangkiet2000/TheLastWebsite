@@ -5,7 +5,9 @@
   Time: 12:38 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html;charset=UTF-8" language="java"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -497,18 +499,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="khunganhto" style="height: 400px;">
                             <div class="flexslider">
                                 <ul class="slides">
-                                    <li data-thumb="${detail.img}">
-                                        <div class="thumb-image"> <img src="${detail.img}"
+                                    //String id, String name, String img1, long price, long priceSale, String img2, String img3, int quantity
+                                    <li data-thumb="${detail.img1}">
+                                        <div class="thumb-image"> <img src="${detail.img1}"
                                                                        style="height: 400px;" data-imagezoom="true" class="img-responsive"
                                                                        alt="" /> </div>
                                     </li>
-                                    <li data-thumb="${detail.img}">
-                                        <div class="thumb-image"> <img src="${detail.img}"
+                                    <li data-thumb="${detail.img2}">
+                                        <div class="thumb-image"> <img src="${detail.img2}"
                                                                        style="height: 400px;" data-imagezoom="true" class="img-responsive"
                                                                        alt="" /> </div>
                                     </li>
-                                    <li data-thumb="${detail.img}">
-                                        <div class="thumb-image"> <img src="${detail.img}"
+                                    <li data-thumb="${detail.img3}">
+                                        <div class="thumb-image"> <img src="${detail.img3}"
                                                                        style="height: 400px;" data-imagezoom="true" class="img-responsive"
                                                                        alt="" /> </div>
                                     </li>

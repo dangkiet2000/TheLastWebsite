@@ -315,40 +315,40 @@
 
                 <div class="in-check">
                     <ul class="unit">
-                        <li><span></span></li>
+                        <li><span>Hình Ảnh</span></li>
                         <li><span>Tên sản phẩm</span></li>
                         <li><span>Số lượng</span></li>
                         <li><span>Giá</span></li>
                         <li><span>Chi tiết giao hàng</span></li>
-                        <li> </li>
                         <div class="clearfix"> </div>
                     </ul>
                     <% cart c = cart.getCart(session);
-                    Collection<Product> data = c.getData();
-                    request.setAttribute("data",data);
+                        Collection<Product> data = c.getData();
+                        request.setAttribute("data",data);
                     %>
                     <c:forEach items="${data}" var="d">
-                    <ul class="cart-header">
-                        <div class="close1"> </div>
-                        <li class="ring-in"><a href="DetailControll"><img src="${d.img}"
-                                                                       class="img-responsive" alt=""></a>
-                        </li>
-                        <li><span class="name">${d.name}</span></li>
-                        <li><span class="name">
-									<div class="buttons_added">
-										<input class="minus is-form" type="button" value="-">
-										<input aria-label="quantity" class="input-qty" max="10" min="1" name=""
-                                               type="number" value="1"> <input class="plus is-form" type="button"
-                                                                               value="+">
-									</div>
-								</span>
-                        </li>
-                        <li><span class="cost">${d.price}</span></li>
-                        <li><span>Free</span>
-                            <p>Delivered in 2-3 business days</p>
-                        </li>
-                        <div class="clearfix"> </div>
-                    </ul>
+                        <ul class="cart-header">
+                            <div class="close1"> </div>
+                            <li class="ring-in"><a href="DetailControll"><img src="${d.img}"
+                                                                              class="img-responsive" alt=""></a>
+                            </li>
+                            <li><span class="name">${d.name}</span></li>
+                            <li><span class="name">${d.quantity}</span></li>
+                                <%--                        <li><span class="name">--%>
+                                <%--									<div class="buttons_added">--%>
+                                <%--										<input class="minus is-form" type="button" value="-">--%>
+                                <%--										<input aria-label="quantity" class="input-qty" max="10" min="1" name=""--%>
+                                <%--                                               type="number" value="${d.quantity}"> <input class="plus is-form" type="button"--%>
+                                <%--                                                                               value="+">--%>
+                                <%--									</div>--%>
+                                <%--								</span>--%>
+                                <%--                        </li>--%>
+                            <li><span class="cost">${d.price*d.quantity}</span></li>
+                            <li><span>Free</span>
+                                <p>Delivered in 2-3 business days</p>
+                            </li>
+                            <div class="clearfix"> </div>
+                        </ul>
                     </c:forEach>
 
                 </div>
@@ -374,7 +374,7 @@
                             <p class="tamtinh">Tạm tính</p>
                             <a href="checkout.html">
                                 <div class="total total1">
-                                    <span style="font-size: 20px;color: #ff6600;" class="simpleCart_total"></span>
+                                    <span style="font-size: 20px;color: #ff6600;" class="simpleCart_total">"${d.price*d.quantity}"</span>
                                 </div>
 
                             </a>
@@ -391,8 +391,8 @@
 
                     </div>
                     <div class="othanhtoan2" style="background-color: white;">
-                        <a style="text-decoration: none;" href="thanhtoan.html"><button type="button"
-                                                                                        class="cart__submit">Tiến hành đặt hàng</button></a>
+                        <a style="text-decoration: none;" href="thanhtoan.jsp"><button type="button"
+                                                                                       class="cart__submit">Tiến hành đặt hàng</button></a>
 
 
 
@@ -603,5 +603,5 @@
 
 
     <!--footer-end-->
- </body>
+</body>
 </html>
