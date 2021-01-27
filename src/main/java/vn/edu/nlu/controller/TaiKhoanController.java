@@ -16,7 +16,7 @@ public class TaiKhoanController extends HttpServlet {
         ProductEntity pe = new ProductEntity();
         List<User> users = pe.getAllUser();
         request.setAttribute("listUser", users);
-        request.getRequestDispatcher("danhsachtaikhoan.jsp").forward(request,response);
+        request.getRequestDispatcher("View/danhsachtaikhoan.jsp").forward(request,response);
 
     }
 

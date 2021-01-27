@@ -2,10 +2,8 @@ package vn.edu.nlu.entity;
 
 import vn.edu.nlu.ConnectionDB;
 import vn.edu.nlu.bean.Blog;
-import vn.edu.nlu.bean.Product;
 
 import java.sql.Date;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.LinkedList;

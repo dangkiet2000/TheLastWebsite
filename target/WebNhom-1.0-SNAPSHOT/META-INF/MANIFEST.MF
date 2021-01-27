@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
+<<<<<<< HEAD
 Built-By: dinht
 Build-Jdk: 1.8.0_281
+=======
+Built-By: Admin
+Build-Jdk: 1.8.0_221
+>>>>>>> 82a67e9d3b80dfd9ac5b95df800b8123b2997be8
 

@@ -89,9 +89,9 @@ public class DAO {
 
         }
     }
-//Product(String id, String name, String img, long price, long priceSale)
-    public Product  getProductByID(String id) {
-        String query = "SELECT * FROM product1\n" +
+    //Product(String id, String name, String img, long price, long priceSale)
+    public Product getProductByID(String id) {
+        String query = "SELECT * FROM product\n" +
                 "WHERE id = ? ";
         try {
             conn = ConnectionDB.connect().getConnection();
@@ -103,8 +103,11 @@ public class DAO {
                         rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getLong(6),
-                        rs.getLong(15)
+                        rs.getLong(4),
+                        rs.getLong(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getInt(15)
                 );
             }
         }catch (Exception e){

@@ -16,7 +16,7 @@ public class NhaCungCapController extends HttpServlet {
         ProductEntity pe = new ProductEntity();
         List<NhaCungCap> listNCC = pe.getAllNCC();
         request.setAttribute("listNCC", listNCC);
-        request.getRequestDispatcher("danhsachhangsanxuat.jsp").forward(request,response);
+        request.getRequestDispatcher("View/danhsachhangsanxuat.jsp").forward(request,response);
     }
 
     @Override
