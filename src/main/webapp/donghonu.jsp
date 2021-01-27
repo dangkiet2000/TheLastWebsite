@@ -271,6 +271,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 </div>
             </div>
+
             <div class="col-md-3 prdt-right">
                 <div class="w_sidebar">
                     <section class="sky-form">
@@ -313,11 +314,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <section class="sky-form">
                         <h4>Lọc theo giá</h4>
                         <div class="row1 row2 scroll-pane">
-                            <div class="col col-4">
-                                <label class="radio"><input type="radio" name="radio" checked=""><i></i>2.000.000đ - 4.000.000đ
+                            <div class="col col-4" name="vauleFilter" id="selectFiler">
+                                <label class="radio" value="1"><input type="radio" name="radio" checked=""><i></i>1.000.000đ - 10.000.000đ
                                     above</label>
-                                <label class="radio"><input type="radio" name="radio"><i></i>2.000.000đ - 4.000.000đ</label>
-                                <label class="radio"><input type="radio" name="radio"><i></i>4.000.000đ - 6.000.000đ</label>
+                                <label class="radio" value="2"><input type="radio" name="radio"><i></i>10.000.000đ - 20.000.000đ</label>
+                                <label class="radio" value="3"><input type="radio" name="radio"><i></i>.000.000đ - 6.000.000đ</label>
                             </div>
                             <div class="col col-4">
                                 <label class="radio"><input type="radio" name="radio"><i></i>6.000.000đ - 8.000.000đ</label>
@@ -363,9 +364,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<button type="button" class="btn nut-dong-chatbox" onclick="dongForm()">Đóng</button>
 		</form>
 	</div>
+
 	<!--product-end-->
 	<!--information-starts-->
 	<jsp:include page="footer.jsp"></jsp:include>
+
+
 </body>
 
 </html>

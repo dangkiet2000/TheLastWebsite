@@ -249,8 +249,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                     </c:forEach>
-
                     <div class="clearfix"></div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <c:forEach begin="1" end="${endPage}" var="i">
+                                <li class="page-item"><a class="page-link" href="SearchCategory?index=${i}&idCategory=${idCategory}">${i}</a></li>
+                            </c:forEach>
+                            <li class="page-item">
+                                <a class="page-link" href="SearchCategory?index=${index+1}&idCategory=${idCategory}">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </div>
@@ -297,11 +306,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <section class="sky-form">
                     <h4>Lọc theo giá</h4>
                     <div class="row1 row2 scroll-pane">
-                        <div class="col col-4">
-                            <label class="radio"><input type="radio" name="radio" checked=""><i></i>2.000.000đ - 4.000.000đ
+                        <div class="col col-4" name="vauleFilter" id="selectFiler">
+                            <label class="radio" value="1"><input type="radio" name="radio" checked=""><i></i>1.000.000đ - 10.000.000đ
                                 above</label>
-                            <label class="radio"><input type="radio" name="radio"><i></i>2.000.000đ - 4.000.000đ</label>
-                            <label class="radio"><input type="radio" name="radio"><i></i>4.000.000đ - 6.000.000đ</label>
+                            <label class="radio" value="2"><input type="radio" name="radio"><i></i>10.000.000đ - 20.000.000đ</label>
+                            <label class="radio" value="3"><input type="radio" name="radio"><i></i>.000.000đ - 6.000.000đ</label>
                         </div>
                         <div class="col col-4">
                             <label class="radio"><input type="radio" name="radio"><i></i>6.000.000đ - 8.000.000đ</label>
@@ -347,6 +356,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <button type="button" class="btn nut-dong-chatbox" onclick="dongForm()">Đóng</button>
     </form>
 </div>
+<script>
+    var x=document.getElementById('${index}')
+    document.getElementById('selectFilter').selectedIndex="${valueFilter}";
+    function genderChanged(){
+        var x= document.getElementById('selectFilter');
+        var value= x.value;
+        if(value=='1'){
+            location.assign("SearchCategory?index=1&idCategory=${idCategory}&idSupplier=${idSupplier}&valueFiler=1");
+
+        }
+        else if(value=='2'){
+            location.assign("SearchCategory?index=1&idCategory=${idCategory}&idSupplier=${idSupplier}&valueFiler=2");
+
+        }
+        else if(value=='3'){
+            location.assign("SearchCategory?index=1&idCategory=${idCategory}&idSupplier=${idSupplier}&valueFiler=3");
+
+        }
+
+    }
+    var value =x.
+</script>
 <!--product-end-->
 <!--information-starts-->
 <jsp:include page="footer.jsp"></jsp:include>

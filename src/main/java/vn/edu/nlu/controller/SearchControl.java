@@ -37,7 +37,7 @@ public class SearchControl extends HttpServlet {
         request.setAttribute("index",index);
         request.setAttribute("size",count);
 
-        request.getRequestDispatcher("donghonu.jsp").forward(request,response);
+        request.getRequestDispatcher("donghonam.jsp").forward(request,response);
 
     }
 

@@ -11,16 +11,36 @@ public class Product implements Serializable{
     private long price;
     private long priceSale;
     private int quantity;
+    private  String id_categories;
+    private String id_supplier;
 
     public Product(String string, String rsString, String s, long aLong, long rsLong, long l){
 
     }
+
+    public String getId_categories() {
+        return id_categories;
+    }
+
+    public void setId_categories(String id_categories) {
+        this.id_categories = id_categories;
+    }
+
     public Product(String id, String name, String img, long price, long priceSale){
         this.id = id;
         this.name = name;
         this.img = img;
         this.price = price;
         this.priceSale = priceSale;
+    }
+    public Product(String id, String name, String img, long price, long priceSale,String id_categories,String id_supplier){
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.price = price;
+        this.priceSale = priceSale;
+        this.id_categories=id_categories;
+        this.id_supplier=id_supplier;
     }
 
 
@@ -71,6 +91,15 @@ public class Product implements Serializable{
     public int getQuantity() {
         return quantity;
     }
+
+    public String getId_supplier() {
+        return id_supplier;
+    }
+
+    public void setId_supplier(String id_supplier) {
+        this.id_supplier = id_supplier;
+    }
+
     public  void add(){
         quantity++;
     }
